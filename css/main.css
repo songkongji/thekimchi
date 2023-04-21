@@ -1,0 +1,164 @@
+* { margin: 0; padding: 0;}
+li { list-style: none;}
+a { text-decoration: none; color: #212121;}
+div, header, section, footer, li {
+    box-sizing: border-box;
+}
+img { width: 100%; }
+.wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+header {
+    width: 100%;
+    height: 140px;
+    /* overflow: hidden; */
+}
+/* 더김치 로고 */
+header #logo {
+    margin-top: 50px;
+    float: left;
+}
+/* 메뉴들 정렬 */
+header nav {
+    float: left;
+    margin-top: 50px;
+    margin-left: 200px;
+}
+/* 주메뉴 */
+header nav > ul > li {
+    float: left;
+    margin: 0 30px;
+    position: relative; /* 서브메뉴 등장시 주메뉴 밀림현상 방지 */
+}
+/* 주메뉴에 마우스 오버시 색변경 */
+header nav > ul > li:hover > a {
+    color: #888;
+}
+/* 주메뉴 폰트 크기, 서브메뉴와의 간격 */
+header nav ul li a {
+    font-size: 15px;
+    display: block;
+    padding-bottom: 20px;
+}
+/* 서브메뉴 마우스 오버시 색변경 */
+header nav .SUB li a:hover {
+    color: #888;
+}
+/* 서브메뉴 영역 */
+header nav .SUB {
+    background-color: #333;
+    padding: 20px;
+    display: none;
+    position: absolute; /* 서브메뉴 등장시 주메뉴 밀림현상 방지 */
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* 서브메뉴 글자 */
+header nav .SUB li a {
+    color: #fff;
+    font-size: 12px;
+    display: block; /*padding 적용 위해 블록요소로 변경*/
+    padding: 7px;
+}
+/* 주메뉴에 마우스 올리면 서브메뉴 등장 */
+header nav ul li:hover .SUB{
+    display: block;
+}
+/* 탑메뉴 공간 */
+header .top_menu{
+    float: right;
+    margin-top: 50px;
+}
+/* 탑메뉴 글자들 */
+header .top_menu ul li {
+    float: left;
+    margin: 0 8px;
+}
+/* 탑메뉴 폰트크기 */
+header .top_menu ul li a {
+    font-size: 13px;
+}
+/* 탑메뉴에 마우스 오버시 색변경 */
+header .top_menu ul li a:hover {
+    color: #aaa;
+}
+/* 배너영역 할당 */
+section .banner {
+    width: 100%;
+    margin-top: 60px;
+}
+/* 섹션안 6개의 박스 */
+section .banner .box {
+    width: 366px;
+    background-color: #d6d4d4;
+    padding: 10px;
+}
+/* 배너 영역 */
+section .banner ul li {
+    float: left;
+    margin: 0 20px 10px 20px;
+}
+/* 사진들 */
+section .photo {
+    margin-bottom: 20px;
+}
+/* 사진밑에 글 */
+section .des {
+    padding: 10px;
+}
+/* 제목글 */
+section .banner ul li .box .des h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+/* 내용 */
+section .banner ul li .box .des p {
+    font-size: 13px;
+    line-height: 22px;
+    text-align: justify;
+}
+/* 위아래 간격 주기 */
+section .banner .box:first-child {
+    margin-bottom: 40px;
+}
+/* 맨 오른쪽 여백제거 */
+section .banner li:nth-child(3){
+    margin-right: 0;
+}
+section .banner li:nth-child(1){
+    margin-left: 0;
+}
+/* footer 영역 잡기 */
+footer {
+    clear: both;    /* float 해제 */
+    width: 100%;
+    background-color: #f8f8f8;
+    margin-top: 100px;
+    padding: 60px;
+    padding-bottom: 20px;
+    overflow: hidden; /* footer가 자식객체의 높이를 인식하도록 설정함 */
+}
+/* 가로정렬 */
+footer > div {
+    float: left;
+    margin: 0 40px;
+    font-size: 11px;
+}
+/* 글머리 */
+footer div h4 { font-weight: normal; margin-bottom: 10px; }
+/* 내용 */
+footer div p { line-height: 24px; }
+/* cs센터랑 bank 어카운트 사이 */
+footer div div { margin-bottom: 30px; }
+/* 주소 */
+footer div address { font-style: normal; line-height: 24px; margin-bottom: 30px;}
+/* 맨 왼쪽 4개 링크 행간 */
+footer ul li { padding: 7px 0;}
+/* 맨 왼쪽 세번쨰 링크 굵게*/
+footer ul li:nth-child(3) a { font-weight: bold; }
+/* 맨 왼쪽 링크 마우스오버시 언더라인 */
+footer ul li:hover a { text-decoration: underline; }
+/* cs 센터 밑 숫자 크게 */
+footer .cs p:nth-child(2) { font-size: 16px; margin-bottom: 5px; }
+
